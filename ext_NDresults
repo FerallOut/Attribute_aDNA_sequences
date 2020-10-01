@@ -1,0 +1,493 @@
+
+ The DataFrame from sequence file "I1300.mpileup":
+"I1300.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G        AA
+1  10   159060         T          C  Neandertal              T         .
+2  10   291973         A          G  Neandertal              A         .
+3  10   291999         A          G    Denisova              G         A
+4  10   326911         T          C         all              C         ,
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G        AA
+1  10   159060         T          C  Neandertal              T         .
+2  10   291973         A          G  Neandertal              A         .
+3  10   291999         A          G    Denisova              G         A
+4  10   326911         T          C         all              C         ,
+******************
+"I1300.mpileup": The common dataframe after replacing missing data with "*":
+(149971, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G        AA
+1  10   159060         T          C  Neandertal              T         .
+2  10   291973         A          G  Neandertal              A         .
+3  10   291999         A          G    Denisova              G         A
+4  10   326911         T          C         all              C         ,
+***************
+"I1300.mpileup": The common dataframe after drop of "*" rows:
+(147813, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G        AA
+1  10   159060         T          C  Neandertal              T         .
+2  10   291973         A          G  Neandertal              A         .
+3  10   291999         A          G    Denisova              G         A
+4  10   326911         T          C         all              C         ,
+*************
+"I1300.mpileup": common dataframe after final filtering
+(147813, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G         A
+1  10   159060         T          C  Neandertal              T         T
+2  10   291973         A          G  Neandertal              A         A
+3  10   291999         A          G    Denisova              G         A
+4  10   326911         T          C         all              C         C
+***********
+"I1300.mpileup": The dataframe with the results only for Neanderthal
+    chr position base_orig base_deriv       group base_reference base_read
+11   10   395463         G          A  Neandertal              G         A
+95   10  1478154         C          T  Neandertal              T         T
+100  10  1500525         A          G  Neandertal              A         G
+106  10  1512546         G          A  Neandertal              G         A
+192  10  2135810         G          T  Neandertal              G         T
+(2373, 7)
+********************
+"I1300.mpileup": The dataframe with the results only for human
+   chr position base_orig base_deriv  group base_reference base_read
+17  10   432294         G          C  human              C         C
+31  10   595469         C          T  human              T         T
+32  10   616500         C          T  human              T         T
+58  10  1183739         T          C  human              T         C
+60  10  1208148         A          G  human              G         G
+(13055, 7)
+*************
+The results, wihout Denisovan contribution: 
+Neand:2373 - Hu:13055 
+The individual is most likely to be related to modern humans
+*******************
+The results, when considering Denisovan contribution:
+Neand:6019 - Hu:15570 
+The individual is most likely to be related to modern humans
+*******************
+
+ The DataFrame from sequence file "I1302.mpileup":
+"I1302.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv       group base_reference base_read
+0  10  1569079         C          T         all              T         .
+1  10  2424556         T          C  Neandertal              C         ,
+2  10  3455252         C          T         all              T         ,
+3  10  3805697         C          T         all              T         .
+4  10  3962065         T          G       human              T         .
+  chr position base_orig base_deriv       group base_reference base_read
+0  10  1569079         C          T         all              T         .
+1  10  2424556         T          C  Neandertal              C         ,
+2  10  3455252         C          T         all              T         ,
+3  10  3805697         C          T         all              T         .
+4  10  3962065         T          G       human              T         .
+******************
+"I1302.mpileup": The common dataframe after replacing missing data with "*":
+(3811, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10  1569079         C          T         all              T         .
+1  10  2424556         T          C  Neandertal              C         ,
+2  10  3455252         C          T         all              T         ,
+3  10  3805697         C          T         all              T         .
+4  10  3962065         T          G       human              T         .
+***************
+"I1302.mpileup": The common dataframe after drop of "*" rows:
+(3757, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10  1569079         C          T         all              T         .
+1  10  2424556         T          C  Neandertal              C         ,
+2  10  3455252         C          T         all              T         ,
+3  10  3805697         C          T         all              T         .
+4  10  3962065         T          G       human              T         .
+*************
+"I1302.mpileup": common dataframe after final filtering
+(3757, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10  1569079         C          T         all              T         T
+1  10  2424556         T          C  Neandertal              C         C
+2  10  3455252         C          T         all              T         T
+3  10  3805697         C          T         all              T         T
+4  10  3962065         T          G       human              T         T
+***********
+"I1302.mpileup": The dataframe with the results only for Neanderthal
+    chr   position base_orig base_deriv       group base_reference base_read
+1    10    2424556         T          C  Neandertal              C         C
+121  10   79903729         T          G  Neandertal              G         G
+193  10  120588918         A          C  Neandertal              C         C
+208  10  126815404         T          C  Neandertal              C         C
+528  12   81160242         A          G  Neandertal              A         G
+(70, 7)
+********************
+"I1302.mpileup": The dataframe with the results only for human
+   chr  position base_orig base_deriv  group base_reference base_read
+5   10   4301823         T          C  human              C         C
+10  10   5326846         T          C  human              C         C
+12  10   6292875         A          C  human              C         C
+25  10  10586289         C          T  human              C         T
+29  10  11950934         G          A  human              A         A
+(381, 7)
+*************
+The results, wihout Denisovan contribution: 
+Neand:70 - Hu:381 
+The individual is most likely to be related to modern humans
+*******************
+The results, when considering Denisovan contribution:
+Neand:164 - Hu:442 
+The individual is most likely to be related to modern humans
+*******************
+
+ The DataFrame from sequence file "I1303.mpileup":
+"I1303.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv             group base_reference base_read
+0  10   158971         G          T             human              G         a
+1  10   331763         C          T  Neandertal-Human              C         *
+2  10   395463         G          A        Neandertal              G         a
+3  10   432023         C          T  Neandertal-Human              C         *
+4  10   432058         G          A          Denisova              G         .
+  chr position base_orig base_deriv             group base_reference base_read
+0  10   158971         G          T             human              G         a
+1  10   331763         C          T  Neandertal-Human              C         *
+2  10   395463         G          A        Neandertal              G         a
+3  10   432023         C          T  Neandertal-Human              C         *
+4  10   432058         G          A          Denisova              G         .
+******************
+"I1303.mpileup": The common dataframe after replacing missing data with "*":
+(43068, 7)
+  chr position base_orig base_deriv             group base_reference base_read
+0  10   158971         G          T             human              G         a
+1  10   331763         C          T  Neandertal-Human              C         *
+2  10   395463         G          A        Neandertal              G         a
+3  10   432023         C          T  Neandertal-Human              C         *
+4  10   432058         G          A          Denisova              G         .
+***************
+"I1303.mpileup": The common dataframe after drop of "*" rows:
+(42431, 7)
+  chr position base_orig  ...                group base_reference base_read
+0  10   158971         G  ...                human              G         a
+2  10   395463         G  ...           Neandertal              G         a
+4  10   432058         G  ...             Denisova              G         .
+5  10   432072         C  ...                  all              G         .
+6  10   453545         G  ...  Neandertal-Denisova              G         .
+
+[5 rows x 7 columns]
+*************
+"I1303.mpileup": common dataframe after final filtering
+(42431, 7)
+  chr position base_orig  ...                group base_reference base_read
+0  10   158971         G  ...                human              G         A
+2  10   395463         G  ...           Neandertal              G         A
+4  10   432058         G  ...             Denisova              G         G
+5  10   432072         C  ...                  all              G         G
+6  10   453545         G  ...  Neandertal-Denisova              G         G
+
+[5 rows x 7 columns]
+***********
+"I1303.mpileup": The dataframe with the results only for Neanderthal
+    chr  position base_orig base_deriv       group base_reference base_read
+2    10    395463         G          A  Neandertal              G         A
+32   10   1564771         C          T  Neandertal              T         T
+240  10   8945541         A          C  Neandertal              A         C
+368  10  13975408         C          T  Neandertal              T         T
+422  10  15712400         T          C  Neandertal              T         C
+(741, 7)
+********************
+"I1303.mpileup": The dataframe with the results only for human
+   chr position base_orig base_deriv  group base_reference base_read
+10  10   616500         C          T  human              T         T
+47  10  1936350         A          C  human              A         C
+66  10  2610176         A          G  human              G         G
+69  10  2753160         T          C  human              T         C
+71  10  2969252         G          T  human              G         T
+(3906, 7)
+*************
+The results, wihout Denisovan contribution: 
+Neand:741 - Hu:3906 
+The individual is most likely to be related to modern humans
+*******************
+The results, when considering Denisovan contribution:
+Neand:1887 - Hu:4710 
+The individual is most likely to be related to modern humans
+*******************
+
+ The DataFrame from sequence file "I1324.mpileup":
+"I1324.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G         a
+1  10   331376         T          C         all              C       ^F,
+2  10   331377         G          A         all              A         ,
+3  10   395463         G          A  Neandertal              G         a
+4  10   555457         G          A    Denisova              G         .
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G         a
+1  10   331376         T          C         all              C       ^F,
+2  10   331377         G          A         all              A         ,
+3  10   395463         G          A  Neandertal              G         a
+4  10   555457         G          A    Denisova              G         .
+******************
+"I1324.mpileup": The common dataframe after replacing missing data with "*":
+(14939, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G         a
+1  10   331376         T          C         all              C       ^F,
+2  10   331377         G          A         all              A         ,
+3  10   395463         G          A  Neandertal              G         a
+4  10   555457         G          A    Denisova              G         .
+***************
+"I1324.mpileup": The common dataframe after drop of "*" rows:
+(14585, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G         a
+1  10   331376         T          C         all              C       ^F,
+2  10   331377         G          A         all              A         ,
+3  10   395463         G          A  Neandertal              G         a
+4  10   555457         G          A    Denisova              G         .
+*************
+"I1324.mpileup": common dataframe after final filtering
+(14585, 7)
+  chr position base_orig base_deriv       group base_reference base_read
+0  10   158971         G          T       human              G         A
+1  10   331376         T          C         all              C         C
+2  10   331377         G          A         all              A         A
+3  10   395463         G          A  Neandertal              G         A
+4  10   555457         G          A    Denisova              G         G
+***********
+"I1324.mpileup": The dataframe with the results only for Neanderthal
+    chr  position base_orig base_deriv       group base_reference base_read
+3    10    395463         G          A  Neandertal              G         A
+10   10    993351         A          G  Neandertal              A         G
+11   10    993377         G          A  Neandertal              A         A
+117  10  11198130         T          G  Neandertal              T         G
+118  10  11198148         G          A  Neandertal              G         A
+(220, 7)
+********************
+"I1324.mpileup": The dataframe with the results only for human
+   chr position base_orig base_deriv  group base_reference base_read
+35  10  2864447         A          G  human              G         G
+36  10  2959688         T          G  human              G         G
+38  10  3300177         G          A  human              A         A
+72  10  5794025         C          T  human              C         T
+75  10  6036144         C          T  human              T         T
+(1495, 7)
+*************
+The results, wihout Denisovan contribution: 
+Neand:220 - Hu:1495 
+The individual is most likely to be related to modern humans
+*******************
+The results, when considering Denisovan contribution:
+Neand:621 - Hu:1773 
+The individual is most likely to be related to modern humans
+*******************
+
+ The DataFrame from sequence file "Vi33.16.mpileup":
+"Vi33.16.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv group base_reference base_read
+0  10   122190         G          C   all              C         .
+1  10   137361         A          C   all              C         .
+2  10   156907         G          C   all              C         .
+3  10   156912         A          G   all              G         .
+4  10   157258         G          A   all              A         .
+  chr position base_orig base_deriv group base_reference base_read
+0  10   122190         G          C   all              C         .
+1  10   137361         A          C   all              C         .
+2  10   156907         G          C   all              C         .
+3  10   156912         A          G   all              G         .
+4  10   157258         G          A   all              A         .
+******************
+"Vi33.16.mpileup": The common dataframe after replacing missing data with "*":
+(253507, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10   122190         G          C   all              C         .
+1  10   137361         A          C   all              C         .
+2  10   156907         G          C   all              C         .
+3  10   156912         A          G   all              G         .
+4  10   157258         G          A   all              A         .
+***************
+"Vi33.16.mpileup": The common dataframe after drop of "*" rows:
+(245276, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10   122190         G          C   all              C         .
+1  10   137361         A          C   all              C         .
+2  10   156907         G          C   all              C         .
+3  10   156912         A          G   all              G         .
+4  10   157258         G          A   all              A         .
+*************
+"Vi33.16.mpileup": common dataframe after final filtering
+(245276, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10   122190         G          C   all              C         C
+1  10   137361         A          C   all              C         C
+2  10   156907         G          C   all              C         C
+3  10   156912         A          G   all              G         G
+4  10   157258         G          A   all              A         A
+***********
+"Vi33.16.mpileup": The dataframe with the results only for Neanderthal
+    chr position base_orig base_deriv       group base_reference base_read
+23   10   302131         C          T  Neandertal              C         T
+47   10   455145         A          G  Neandertal              A         G
+59   10   561275         T          C  Neandertal              T         C
+99   10   765897         C          G  Neandertal              C         G
+107  10   800181         T          C  Neandertal              T         C
+(9786, 7)
+********************
+"Vi33.16.mpileup": The dataframe with the results only for human
+     chr  position base_orig base_deriv  group base_reference base_read
+1242  10   9311512         T          G  human              G         G
+3360  10  30080360         C          G  human              C         G
+3393  10  30297987         C          T  human              T         T
+3667  10  33447015         T          C  human              C         C
+3728  10  33913770         G          A  human              A         A
+(574, 7)
+*************
+The results, wihout Denisovan contribution: 
+
+Neand:9786 - Hu:574 
+The individual is most likely to be related to Neanderthals
+*******************
+The results, when considering Denisovan contribution:
+
+Neand:17182 - Hu:945 
+The individual is most likely to be related to Neanderthals
+*******************
+
+ The DataFrame from sequence file "Vi33.25.mpileup":
+"Vi33.25.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv group base_reference base_read
+0  10   137361         A          C   all              C         .
+1  10   137376         A          C   all              C         .
+2  10   137398         G          C   all              C         .
+3  10   149647         G          A   all              A         .
+4  10   149650         T          C   all              C         .
+  chr position base_orig base_deriv group base_reference base_read
+0  10   137361         A          C   all              C         .
+1  10   137376         A          C   all              C         .
+2  10   137398         G          C   all              C         .
+3  10   149647         G          A   all              A         .
+4  10   149650         T          C   all              C         .
+******************
+"Vi33.25.mpileup": The common dataframe after replacing missing data with "*":
+(248148, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10   137361         A          C   all              C         .
+1  10   137376         A          C   all              C         .
+2  10   137398         G          C   all              C         .
+3  10   149647         G          A   all              A         .
+4  10   149650         T          C   all              C         .
+***************
+"Vi33.25.mpileup": The common dataframe after drop of "*" rows:
+(241644, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10   137361         A          C   all              C         .
+1  10   137376         A          C   all              C         .
+2  10   137398         G          C   all              C         .
+3  10   149647         G          A   all              A         .
+4  10   149650         T          C   all              C         .
+*************
+"Vi33.25.mpileup": common dataframe after final filtering
+(241644, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10   137361         A          C   all              C         C
+1  10   137376         A          C   all              C         C
+2  10   137398         G          C   all              C         C
+3  10   149647         G          A   all              A         A
+4  10   149650         T          C   all              C         C
+***********
+"Vi33.25.mpileup": The dataframe with the results only for Neanderthal
+    chr position base_orig base_deriv       group base_reference base_read
+5    10   159060         T          C  Neandertal              T         C
+40   10   395584         C          A  Neandertal              C         A
+90   10   719666         C          G  Neandertal              C         G
+174  10  1500798         G          A  Neandertal              A         A
+184  10  1539253         C          T  Neandertal              C         T
+(9995, 7)
+********************
+"Vi33.25.mpileup": The dataframe with the results only for human
+     chr  position base_orig base_deriv  group base_reference base_read
+187   10   1570323         C          T  human              C         T
+212   10   1706725         C          A  human              A         A
+1053  10   9282085         G          A  human              A         A
+1134  10  10020381         A          G  human              A         G
+1837  10  15735617         C          A  human              A         A
+(520, 7)
+*************
+The results, wihout Denisovan contribution: 
+
+Neand:9995 - Hu:520 
+The individual is most likely to be related to Neanderthals
+*******************
+The results, when considering Denisovan contribution:
+
+Neand:17415 - Hu:829 
+The individual is most likely to be related to Neanderthals
+*******************
+
+ The DataFrame from sequence file "Vi33.26.mpileup":
+"Vi33.26.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv group base_reference base_read
+0  10    97647         G          T   all              T         .
+1  10    98215         G          A   all              A         ,
+2  10   153877         C          G   all              G         .
+3  10   183365         G          A   all              A         ,
+4  10   240629         T          C   all              C         .
+  chr position base_orig base_deriv group base_reference base_read
+0  10    97647         G          T   all              T         .
+1  10    98215         G          A   all              A         ,
+2  10   153877         C          G   all              G         .
+3  10   183365         G          A   all              A         ,
+4  10   240629         T          C   all              C         .
+******************
+"Vi33.26.mpileup": The common dataframe after replacing missing data with "*":
+(227318, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10    97647         G          T   all              T         .
+1  10    98215         G          A   all              A         ,
+2  10   153877         C          G   all              G         .
+3  10   183365         G          A   all              A         ,
+4  10   240629         T          C   all              C         .
+***************
+"Vi33.26.mpileup": The common dataframe after drop of "*" rows:
+(220659, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10    97647         G          T   all              T         .
+1  10    98215         G          A   all              A         ,
+2  10   153877         C          G   all              G         .
+3  10   183365         G          A   all              A         ,
+4  10   240629         T          C   all              C         .
+*************
+"Vi33.26.mpileup": common dataframe after final filtering
+(220659, 7)
+  chr position base_orig base_deriv group base_reference base_read
+0  10    97647         G          T   all              T         T
+1  10    98215         G          A   all              A         A
+2  10   153877         C          G   all              G         G
+3  10   183365         G          A   all              A         A
+4  10   240629         T          C   all              C         C
+***********
+"Vi33.26.mpileup": The dataframe with the results only for Neanderthal
+   chr position base_orig base_deriv       group base_reference base_read
+6   10   252682         C          T  Neandertal              C         T
+22  10   395584         C          A  Neandertal              C         A
+59  10   729877         T          C  Neandertal              T         C
+62  10   765072         A          G  Neandertal              A         G
+64  10   787852         A          G  Neandertal              A         G
+(9095, 7)
+********************
+"Vi33.26.mpileup": The dataframe with the results only for human
+     chr  position base_orig base_deriv  group base_reference base_read
+210   10   2260274         A          G  human              G         G
+353   10   3504197         G          C  human              G         C
+497   10   4653646         A          G  human              G         G
+2612  10  26524900         A          G  human              G         G
+2749  10  28366123         G          A  human              G         A
+(493, 7)
+*************
+The results, wihout Denisovan contribution: 
+
+Neand:9095 - Hu:493 
+The individual is most likely to be related to Neanderthals
+*******************
+The results, when considering Denisovan contribution:
+
+Neand:15729 - Hu:799 
+The individual is most likely to be related to Neanderthals
+*******************

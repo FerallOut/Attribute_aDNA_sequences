@@ -1,0 +1,139 @@
+
+ The DataFrame from sequence file "jar001.mpileup":
+"jar001.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv     group base_reference base_read
+0  10   156907         G          C       all              C         ,
+1  10   156912         A          G       all              G         ,
+2  10   183365         G          A       all              A         ,
+3  10   186623         T          C       all              C         .
+4  10   208340         A          G  Denisova              A         G
+  chr position base_orig base_deriv     group base_reference base_read
+0  10   156907         G          C       all              C         ,
+1  10   156912         A          G       all              G         ,
+2  10   183365         G          A       all              A         ,
+3  10   186623         T          C       all              C         .
+4  10   208340         A          G  Denisova              A         G
+******************
+"jar001.mpileup": The common dataframe after replacing missing data with "*":
+(133008, 7)
+  chr position base_orig base_deriv     group base_reference base_read
+0  10   156907         G          C       all              C         ,
+1  10   156912         A          G       all              G         ,
+2  10   183365         G          A       all              A         ,
+3  10   186623         T          C       all              C         .
+4  10   208340         A          G  Denisova              A         G
+***************
+"jar001.mpileup": The common dataframe after drop of "*" rows:
+(131042, 7)
+  chr position base_orig base_deriv     group base_reference base_read
+0  10   156907         G          C       all              C         ,
+1  10   156912         A          G       all              G         ,
+2  10   183365         G          A       all              A         ,
+3  10   186623         T          C       all              C         .
+4  10   208340         A          G  Denisova              A         G
+*************
+"jar001.mpileup": common dataframe after final filtering
+(131042, 7)
+  chr position base_orig base_deriv     group base_reference base_read
+0  10   156907         G          C       all              C         C
+1  10   156912         A          G       all              G         G
+2  10   183365         G          A       all              A         A
+3  10   186623         T          C       all              C         C
+4  10   208340         A          G  Denisova              A         G
+***********
+"jar001.mpileup": The dataframe with the results only for Neanderthal
+    chr  position base_orig base_deriv       group base_reference base_read
+89   10   1594607         G          A  Neandertal              G         A
+244  10   3782419         G          A  Neandertal              A         A
+411  10   6474027         G          A  Neandertal              G         A
+414  10   6503894         C          A  Neandertal              C         A
+646  10  10229969         A          T  Neandertal              A         T
+(686, 7)
+********************
+"jar001.mpileup": The dataframe with the results only for human
+    chr position base_orig base_deriv  group base_reference base_read
+41   10   595469         C          T  human              T         T
+60   10  1064940         C          T  human              C         T
+106  10  1706725         C          A  human              A         A
+116  10  1746219         A          G  human              A         G
+128  10  1883409         T          C  human              C         C
+(3893, 7)
+*************
+The results, wihout Denisovan contribution: 
+Neand:686 - Hu:3893 
+The individual is most likely to be related to modern humans
+*******************
+The results, when considering Denisovan contribution:
+Neand:1904 - Hu:5121 
+The individual is most likely to be related to modern humans
+*******************
+
+ The DataFrame from sequence file "jar002.mpileup":
+"jar002.mpileup": The dataframe with the common values (reference file and sequence):
+  chr position base_orig base_deriv  group base_reference base_read
+0  10   331336         A          G    all              G         ,
+1  10   331376         T          C    all              C         ,
+2  10   331377         G          A    all              A         ,
+3  10   462230         A          C  human              C         .
+4  10   856644         C          G    all              G         ,
+  chr position base_orig base_deriv  group base_reference base_read
+0  10   331336         A          G    all              G         ,
+1  10   331376         T          C    all              C         ,
+2  10   331377         G          A    all              A         ,
+3  10   462230         A          C  human              C         .
+4  10   856644         C          G    all              G         ,
+******************
+"jar002.mpileup": The common dataframe after replacing missing data with "*":
+(13358, 7)
+  chr position base_orig base_deriv  group base_reference base_read
+0  10   331336         A          G    all              G         ,
+1  10   331376         T          C    all              C         ,
+2  10   331377         G          A    all              A         ,
+3  10   462230         A          C  human              C         .
+4  10   856644         C          G    all              G         ,
+***************
+"jar002.mpileup": The common dataframe after drop of "*" rows:
+(13203, 7)
+  chr position base_orig base_deriv  group base_reference base_read
+0  10   331336         A          G    all              G         ,
+1  10   331376         T          C    all              C         ,
+2  10   331377         G          A    all              A         ,
+3  10   462230         A          C  human              C         .
+4  10   856644         C          G    all              G         ,
+*************
+"jar002.mpileup": common dataframe after final filtering
+(13203, 7)
+  chr position base_orig base_deriv  group base_reference base_read
+0  10   331336         A          G    all              G         G
+1  10   331376         T          C    all              C         C
+2  10   331377         G          A    all              A         A
+3  10   462230         A          C  human              C         C
+4  10   856644         C          G    all              G         G
+***********
+"jar002.mpileup": The dataframe with the results only for Neanderthal
+    chr   position base_orig base_deriv       group base_reference base_read
+37   10    6474027         G          A  Neandertal              G         A
+252  10   54049835         A          G  Neandertal              G         G
+498  10  105326081         T          A  Neandertal              T         A
+642  10  130856175         G          A  Neandertal              G         A
+736  11   15829989         G          A  Neandertal              A         A
+(63, 7)
+********************
+"jar002.mpileup": The dataframe with the results only for human
+   chr  position base_orig base_deriv  group base_reference base_read
+3   10    462230         A          C  human              C         C
+24  10   4062327         G          A  human              G         A
+64  10  10666293         C          T  human              T         T
+84  10  13885175         G          A  human              A         A
+86  10  14339159         G          T  human              T         T
+(417, 7)
+*************
+The results, wihout Denisovan contribution: 
+Neand:63 - Hu:417 
+The individual is most likely to be related to modern humans
+*******************
+The results, when considering Denisovan contribution:
+Neand:172 - Hu:554 
+The individual is most likely to be related to modern humans
+*******************
+Duration: 0:02:51.735447
